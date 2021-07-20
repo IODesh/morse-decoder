@@ -46,7 +46,7 @@ function decode(expr) {
         messageConverted += MORSE_TABLE[expr[i]];
        }
          
-return messageConverted.join('');
+return messageConverted;
 }
 
 module.exports = {
