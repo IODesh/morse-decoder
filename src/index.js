@@ -40,14 +40,18 @@ const MORSE_TABLE = {
 
 function decode(expr) {
     // write your solution here
-   
+    for (let i = 0; i < expr.length; i++) {
+        if ((i+1) % 10 === 0) {expr[i] += ',';
+        };
+    };
+     let massageSplitted = expr.join('').split(',');
      let messageConverted = [];
-     for (let i = 0; i < expr.length; i++) {
-        messageConverted += MORSE_TABLE[expr[i]];
-       }
+     for (let i = 0; i < massageSplitted.length; i++) {
+        messageConverted += MORSE_TABLE[massageSplitted[i]];
+    };
          
 return messageConverted;
-}
+};
 
 module.exports = {
     decode
