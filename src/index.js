@@ -42,11 +42,10 @@ function decode(expr) {
     // write your solution here
    
      let messageConverted = [];
-     
-     expr.map(function (letter) {
-        messageConverted.push(MORSE_TABLE[letter]);
-        });    
-     
+     for (let i = 0; i < expr.length; i++) {
+        messageConverted += MORSE_TABLE[expr[i]];
+       }
+         
 return messageConverted.join('');
 }
 
