@@ -48,6 +48,7 @@ function decode(expr) {
         });    
      
 return messageConverted.join('');
+}
 
 module.exports = {
     decode
